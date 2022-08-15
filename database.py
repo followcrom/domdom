@@ -4,7 +4,9 @@ from sqlalchemy import create_engine, text
 
 import random
 
-db_connection_string = 'mysql+pymysql://ms6jfg2xcfyx:pscale_pw_QmnAiq_CC7aQPsH--HIXD8H3CPGGJ7nb2xWwJMBVsjk@a2akbakyduhe.eu-west-2.psdb.cloud/joviancareers?charset=utf8mb4'
+import os
+
+db_connection_string = os.environ['DB_CONNECTION_STRING']
 
 engine = create_engine(db_connection_string,
                     connect_args={ # extra arguments required to connect to PlanetScale db
