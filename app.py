@@ -26,12 +26,6 @@ import random
 app = Flask(__name__)  # Creating an object of Flask called app
 
 
-
-
-
-
-
-
 @app.route('/')
 def show_dom():
     domdoms = load_domdoms_from_db()
