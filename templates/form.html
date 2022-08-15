@@ -1,34 +1,47 @@
 <div class = content_text_box>
 
+<h4>Send us some wisdom of your own:</h4>
+
   <form action="/sent" method="post">
 
+
     <div>
-    <label>Attribution</label>
+    <label>Title: *</label>
     <br>
-  <input type="text" name="attribution" required placeholder="Bruce Wayne" size="50">
-  </div>
-
-  <div>
-  <label>Title:</label>
-  <br>
-  <input type="text" name="title" value="go for it" size="50">
-  </div>
+    <input type="text" name="title" value="go for it" size="50">
+    </div>
 
 
   <div>
-  <label>Wisdom:</label>
+  <label>Wisdom: *</label>
   <br>
   <textarea name="quote" placeholder="mulit-line input" rows="4" cols="50"></textarea>
   </div>
+
+  <div>
+  <label>Attribution</label>
+  <br>
+<input type="text" name="attribution" required placeholder="Bruce Wayne" size="50">
+</div>
+
+
+<div>
+<label>Name</label>
+<br>
+<input type="text" name="full_name" placeholder="Bruce Wayne" size="50">
+</div>
 
 
   <div>
   <label>Date:</label>
   <br>
-  <input type="date" name="date">
+  <input type="date" value ="<?php echo date('Y-m-d');?>" name="date">
   </div>
-
   <input type="submit" value="Submit">
+
+
+
   </form>
 
+<p style = "font-size:14px">* Required</p>
 </div>

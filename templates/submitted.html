@@ -23,14 +23,20 @@
 <div class="content">
 
 <div class = content_text_box>
-Attribution
-<div>{{submission['attribution']}}</div>
+  <div class = title>
+    {{submission.title}}
+  </div>
 
-Title
-<div>{{submission['title']}}</div>
+  <div class = date>
+  // {{submission.date_created}}
+  </div>
 
-Wisdom
-<div>{{submission['quote']}}</div>
+
+  <p>
+    {{submission.quote}}
+    <br>
+    <i>- {{submission.attribution}}</i>
+  </p>
 </div>
 
 <div class = "more">

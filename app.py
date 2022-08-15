@@ -1,6 +1,9 @@
 """
 How to connect Github with Atom: https://www.youtube.com/watch?v=6HsZMl-qV5k
 
+ctrl + shift + p
+Github: Clone
+
 How To Install Flask: https://phoenixnap.com/kb/install-flask
 Create an Environment in Windows
 py -3 -m venv <name of environment>
@@ -18,30 +21,33 @@ Deactivate the Environment on Windows:
 from flask import Flask, render_template, jsonify, request
 from sqlalchemy import text
 from database import engine, load_domdoms_from_db, load_domdom_from_db, add_to_db
+import random
 
 app = Flask(__name__)  # Creating an object of Flask called app
 
 
 
+
+
+
+
+
 @app.route('/')
-def load_doms():
+def show_dom():
     domdoms = load_domdoms_from_db()
+    numdoms = len(domdoms)
+    id_range = [d['id'] for d in domdoms]
+    dom_id = random.choice(id_range)
+    domdom = load_domdom_from_db(dom_id)
     return render_template('index.html',
-                        domdoms=domdoms,
-                        company_name='SchoFlow')
-
-@app.route('/<id>')
-def show_dom(id):
-    domdom = load_domdom_from_db(id)
-    if not domdom: # if job doesn't exsist
-        return "Not Found", 404
-    return render_template('quote.html', domdom=domdom)
+                        domdom=domdom, dom_id=dom_id,
+                        numdoms=numdoms)
 
 
-@app.route('/api/wisdom/<id>') # an api page for a json list
-def show_json(id):
-    domdom = load_domdom_from_db(id)
-    return jsonify(domdom)
+@app.route('/api') # an api page for a json list
+def show_json():
+    domdoms = load_domdoms_from_db()
+    return jsonify(domdoms)
 
 
 @app.route('/sent', methods=['post'])

@@ -2,9 +2,9 @@ import sqlalchemy
 
 from sqlalchemy import create_engine, text
 
-import os
+import random
 
-db_connection_string = os.environ['DB_CONNECTION_STRING']
+db_connection_string = 'mysql+pymysql://ms6jfg2xcfyx:pscale_pw_QmnAiq_CC7aQPsH--HIXD8H3CPGGJ7nb2xWwJMBVsjk@a2akbakyduhe.eu-west-2.psdb.cloud/joviancareers?charset=utf8mb4'
 
 engine = create_engine(db_connection_string,
                     connect_args={ # extra arguments required to connect to PlanetScale db
@@ -16,23 +16,21 @@ engine = create_engine(db_connection_string,
 def load_domdoms_from_db():
     with engine.connect() as conn:
         result = conn.execute(text("select * from domdoms")) # any sql query
-        domdoms = []
+        domdoms_lst = []
         for row in result.all():
-            domdoms.append(dict(row))
-        return domdoms
+            domdoms_lst.append(dict(row))
+        return domdoms_lst
 
 
-def load_domdom_from_db(id):
+def load_domdom_from_db(dom_id):
+    numdoms = len(load_domdoms_from_db())
     with engine.connect() as conn:
         result = conn.execute(
-        text("select * from domdoms where id = :val"), # sqlalchemy formatting for creating a variable
-        val = id
+        text("select * from domdoms where id = :val"),
+        val=dom_id
         )
         rows = result.all()
-        if len(rows) == 0: # check to see if the db row exsists
-            return None
-        else:
-            return dict(rows[0]) # if so, return as dictionary
+        return dict(rows[0])
 
 
 

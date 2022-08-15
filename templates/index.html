@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ranDom wisDom</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/full_screen.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon_dom.ico') }}">
-
+    <title>ranDom wisDom - {{domdom['title']}}</title>
+{% include 'header.html' %}
 </head>
 
 
@@ -24,21 +19,17 @@
 
 <div class="content">
 
-  {% for domdom in domdoms %}
-
-  {% include 'quotes.html' %}
-
-<div class = "more">
-  <a href = "/{{domdom['id']}}">Find out more</a>
-</div>
-
-  {% endfor %}
-
-  <div class = "more">
-    <a href = "/send">Send your own</a>
+  <div>
+    {{dom_id}} of {{numdoms}}
   </div>
 
+<div>
+  {% include 'quotes.html' %}
+</div>
 
+  <div>
+{% include 'form.html' %}
+</div>
 
 </div>
 

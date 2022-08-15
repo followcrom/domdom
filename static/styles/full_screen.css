@@ -32,7 +32,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-align : right;
-    padding: 5px;
+    padding: 2px;
    }
 
    .date {
@@ -40,7 +40,7 @@
        text-align : left;
        width: 50%;
        margin-left: 50%;
-      padding: 5px;
+      padding: 2px;
       }
 
 .more {
@@ -64,7 +64,7 @@
 
 .content_text_box {
  	text-align: center;
- 	padding : 10px;
+ 	padding : 5px;
  	font-family: Georgia, Times, serif;
  	font-size: 0.98em;
  	color: #000;
