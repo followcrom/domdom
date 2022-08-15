@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ranDom wisDom</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/full_screen.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon_dom.ico') }}">
+
+</head>
+
+
+<body class="main">
+
+<div class="banner">
+<img src="static/images/tony-banner_960x120.gif">
+</div>
+
+<div class="welcome_bar">
+  <script src="{{url_for('static', filename='js/get_time.js')}}"></script>
+</div>
+
+
+<div class="content">
+
+  {% for domdom in domdoms %}
+
+  {% include 'quotes.html' %}
+
+<div class = "more">
+  <a href = "/{{domdom['id']}}">Find out more</a>
+</div>
+
+  {% endfor %}
+
+  <div class = "more">
+    <a href = "/send">Send your own</a>
+  </div>
+
+
+
+</div>
+
+
+{% include 'footer.html' %}
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ranDom wisDom</title>
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/full_screen.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon_dom.ico') }}">
+
+</head>
+
+
+<body class="main">
+
+<div class="banner">
+<img src="static/images/tony-banner_960x120.gif">
+</div>
+
+<div class="welcome_bar">
+  <script src="{{url_for('static', filename='js/get_time.js')}}"></script>
+</div>
+
+
+<div class="content">
+
+<div class = content_text_box>
+Attribution
+<div>{{submission['attribution']}}</div>
+
+Title
+<div>{{submission['title']}}</div>
+
+Wisdom
+<div>{{submission['quote']}}</div>
+</div>
+
+<div class = "more">
+  <a href = "/">Return to homepage</a>
+</div>
+
+  </body>
+  </html>

@@ -1,0 +1,96 @@
+.main {
+    padding : 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+	  background-color: #FFF;
+  }
+
+
+.banner {
+    text-align : center;
+    background-color: #087cbb;
+  	width: 100%;
+  }
+
+
+.welcome_bar {
+  	background-color: #28bbf8;
+    height: 30px;
+  	font-family: Verdana, Geneva, sans-serif;
+  	font-weight: normal;
+  	text-align : center;
+  	font-size: 1.4em;
+  	color: #FFF;
+  }
+
+
+.title {
+    width: 50%;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align : right;
+    padding: 5px;
+   }
+
+   .date {
+     font-family: Arial, Helvetica, sans-serif;
+       text-align : left;
+       width: 50%;
+       margin-left: 50%;
+      padding: 5px;
+      }
+
+.more {
+    padding : 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    text-align : center;
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+
+
+.content {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 60px;
+ }
+
+
+.content_text_box {
+ 	text-align: center;
+ 	padding : 10px;
+ 	font-family: Georgia, Times, serif;
+ 	font-size: 0.98em;
+ 	color: #000;
+ 	line-height: 1.7em;
+ 	border: 5px double #087cbb;
+ 	border-radius: 10px;
+ 	-moz-border-radius:10px; /* Old Firefox */
+ 	background-color: #FFF;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+
+.bottomrow {
+  padding: 10px;
+  background-color: #087cbb;
+	text-align : center;
+	position: fixed;
+  bottom: 0px;
+	width : 100%;
+  height: 40px
+}
+
+
+.icon {
+  padding-right: 10px;
+  padding-left: 10px;
+}
