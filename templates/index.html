@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ranDom wisDom - {{domdom['title']}}</title>
+    <title>ranDom wisDom</title>
 {% include 'header.html' %}
 </head>
 
 
 <body class="main">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJ3SXCZ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
 <div class="banner">
-<img src="static/images/tony-banner_960x120.gif">
+
+<div class="banner_image">
+<img src="static/images/djrr.jpg" alt="DJ Double R" height="120px">
+</div>
+
+
+<div class="button button1">
+<a href="/">Random<br>Wisdom</a>
+</div>
+
 </div>
 
 <div class="welcome_bar">
@@ -19,18 +32,21 @@
 
 <div class="content">
 
-  <div>
-    {{dom_id}} of {{numdoms}}
-  </div>
+<div class = content_box>
 
-<div>
-  {% include 'quotes.html' %}
+<div class="id_ref">
+(This is wisdom number {{dom_id}} of {{numdoms}})
 </div>
 
-  <div>
+
+{% include 'quotes.html' %}
+
+
+<div class=form>
 {% include 'form.html' %}
 </div>
 
+</div>
 </div>
 
 

@@ -30,6 +30,7 @@ def load_domdom_from_db(dom_id):
         return dict(rows[0])
 
 
+
 def add_to_db(data):
     with engine.connect() as conn:
         query = text("INSERT INTO domdoms (title, wisdom, attribution) VALUES (:title, :wisdom, :attribution)")

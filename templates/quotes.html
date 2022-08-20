@@ -1,18 +1,16 @@
-<div class = content_text_box>
-
 <div class = title>
   {{domdom.title}}
 </div>
 
-<div class = date>
-// {{domdom.created_at}}
-</div>
 
+<div class=text>
+  {% for line in domdom.wisdom.split("\n") %}
 
-<p>
-  {{domdom.wisdom}}
+  {{line}}
+
+  {% endfor %}
+
   <br>
+  
   <i>- {{domdom.attribution}}</i>
-</p>
-
 </div>

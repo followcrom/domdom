@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ranDom wisDom</title>
-
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/full_screen.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon_dom.ico') }}">
-
+    <title>ranDom wisDom - {{submission['title']}}</title>
+{% include 'header.html' %}
 </head>
 
 
 <body class="main">
+<script src="{{url_for('static', filename='js/analytics.js')}}"></script>
 
 <div class="banner">
-<img src="static/images/tony-banner_960x120.gif">
+
+<div class="banner_image">
+<img src="static/images/djrr.jpg" alt="DJ Double R" height="120px">
+</div>
+
+
+<div class="button button1">
+<a href="/">Random<br>Wisdom</a>
+</div>
+
 </div>
 
 <div class="welcome_bar">
@@ -22,21 +29,30 @@
 
 <div class="content">
 
-<div class = content_text_box>
-    {{submission.title}}
+<div class = content_box>
 
+<div class = title>
+  {{submission.title}}
+</div>
 
-  <p>
-    {{submission.wisdom}}
+<div class=text>
+    {% for line in submission.wisdom.split("\n") %}
+
+    {{line}}
+
+    {% endfor %}
+
     <br>
+
     <i>- {{submission.attribution}}</i>
-  </p>
-</div>
+  </div>
 
 </div>
 
-<div class = "more">
-  <a href = "/">Return to homepage</a>
+<div class="more">
+  <a class="one" href = "/">Return to homepage</a>
+</div>
+
 </div>
 
   </body>

@@ -3,10 +3,18 @@
   <head>
     <title>ranDom wisDom</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{{url_for('static', filename='js/analytics.js')}}"></script>
+    <script src="{{url_for('static', filename='js/tags.js')}}"></script>
 
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/full_screen.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel= "stylesheet" href= "{{ url_for('static', filename='styles/full_screen.css') }}">
+    <!-- link rel= "stylesheet" media="(min-width: 900px)" href= "{{ url_for('static', filename='styles/full_screen.css') }}" -->
+    <!-- link rel="stylesheet"  media="(max-width: 899px)" href= "{{ url_for('static', filename='styles/handheld.css') }}" -->
+
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon_dom.ico') }}">
+
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
 </head>
 <body>

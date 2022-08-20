@@ -1,35 +1,35 @@
-<div class = content_text_box>
+<div>
 
-<h4>Send us some wisdom of your own:</h4>
+  <h2>Send us some wisdom of your own:</h2>
 
-  <form action="/sent" method="post">
+    <form action="/sent" method="post">
 
-
-    <div>
-    <label>Title: *</label>
-    <br>
-    <input type="text" name="title" value="go for it" size="50">
-    </div>
-
-
-  <div>
-  <label>Wisdom: *</label>
-  <br>
-  <textarea name="wisdom" placeholder="mulit-line input" rows="4" cols="50"></textarea>
-  </div>
-
-  <div>
-  <label>Attribution</label>
-  <br>
-<input type="text" name="attribution" required placeholder="Bruce Wayne" size="50">
-</div>
+      <div>
+      <label>Title:</label>
+      <br>
+      <input type="text" name="title">
+      </div>
 
 
-  <input type="submit" value="Submit">
+      <div>
+      <label>Wisdom: *</label>
+      <br>
+      <textarea name="wisdom" placeholder="mulit-line input"></textarea>
+      </div>
 
 
+      <div>
+      <label>Attribution *</label>
+      <br>
+      <input type="text" name="attribution" required>
+      </div>
 
-  </form>
+      <div class="h-captcha" data-sitekey="c6e54067-96f0-43c5-ae25-72127440590f"></div>
 
-<p style = "font-size:14px">* Required</p>
+      <input type="submit" value="Submit">
+
+    </form>
+
+  <p style = "font-size:0.8em">* required</p>
+
 </div>
