@@ -1,23 +1,23 @@
 .main {
+    display: flex;
+    flex-direction: column;
     padding : 0px;
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
     margin-bottom: 0px;
 	  background-color: #FFF;
+    min-height: 100vh;
   }
 
 
   .banner {
-    display: block;
-    height: 120px;
     background-color: #000;
     padding: 10px;
   }
 
 
 .banner_image {
-    display: block;
     float: left;
     margin-left: 40%;
     margin-right: 1vw;
@@ -26,9 +26,8 @@
 
 .button {
     float: left;
-    display: inline-block;
     text-align: right;
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: Verdana, sans-serif;
     font-weight: normal;
     font-size: 3em;
     background-color: #000;
@@ -47,9 +46,6 @@
     color: #087cbb;
   }
 
-  a {
-      all: unset;
-  }
 
 .welcome_bar {
   	background-color: #7d9a90;
@@ -81,6 +77,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 1.5vh;
+    flex-grow: 1;
    }
 
 
@@ -95,7 +92,7 @@
     font-family: Georgia, Tahoma, sans-serif;
     font-size: 1.2em;
     text-align : center;
-    margin-bottom: 2vh;
+    margin-bottom: 2.5vh;
   }
 
 
@@ -110,7 +107,7 @@
 
 
 .text {
-    margin-top: 5px;
+    margin-top: 4px;
     padding: 5px;
   	text-align: center;
   	font-family: Georgia, Tahoma, sans-serif;
@@ -127,26 +124,29 @@
     color: #000;
     text-align : center;
     margin-top: auto;
-    margin-bottom: 20px;
   }
 
 
 a.one:link {
-  color:#000;
-  text-decoration: none;
-  cursor: pointer;
+    color:#000;
+    text-decoration: none;
+    cursor: pointer;
   }
 
 a.one:visited {
-  color:#000;
-  cursor: pointer;
+    color:#000;
+    cursor: pointer;
 }
 
 a.one:hover {
-  color:#ffcc00;
-  text-decoration: underline;
-  cursor: pointer;
-}
+    color: #7d9a90;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+a {
+    all: unset;
+  }
 
 
 .form {
@@ -184,7 +184,7 @@ textarea {
 
 
 input[type=submit] {
-    width: 60%;
+    width: 40%;
     padding: 12px;
     margin: 8px 0;
     background-color: #000;
@@ -202,21 +202,33 @@ input[type=submit]:hover {
   }
 
 
+/* .bottomrow::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -20px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 7vw 100vw 0vw 0vw;
+      border-color: #000 #7d9a90 transparent transparent;
+    } */
+
+
 .bottomrow {
     background-color: #7d9a90;
     text-align: center;
-    padding-top: 1vw;
+    padding-top: 0.6vw;
     padding-right: 0px;
-    padding-bottom: 1vw;
+    padding-bottom: 0.5vw;
     padding-left: 0px;
-    margin-top: 2vw;
-    position: fixed
-    bottom:0;
-    width:100%;
+    margin-top: 1.5vh;
+    bottom: 0px;
+  	width : 100%;
   }
 
 
 .icon {
-  padding-right: 0px;
-  padding-left: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
