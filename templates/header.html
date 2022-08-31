@@ -1,27 +1,16 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>ranDom wisDom</title>
-    <meta charset="utf-8">
-    <!-- Google tag (Analytics) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5879ZFBCXY"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<head>
+  <title>ranDOM wisDOM</title>
+  <meta charset="utf-8">
+  <!-- Google tag (Analytics) -->
+  <script src="{{url_for('static', filename='js/analytics.js')}}"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5879ZFBCXY"></script>
+  <!-- End Google Tag -->
 
-      gtag('config', 'G-5879ZFBCXY');
-    </script>
-    <!-- End Google Tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel= "stylesheet" media="(min-width: 481px)" href= "{{ url_for('static', filename='styles/full_screen.css') }}">
+  <link rel="stylesheet"  media="(max-width: 480px)" href= "{{ url_for('static', filename='styles/handheld.css') }}">
 
-    <link rel= "stylesheet" media="(min-width: 481px)" href= "{{ url_for('static', filename='styles/full_screen.css') }}">
-    <link rel="stylesheet"  media="(max-width: 480px)" href= "{{ url_for('static', filename='styles/handheld.css') }}">
-
-    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon_dom.ico') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon_dom.ico') }}">
 
 </head>
-<body>
-</body>
-</html>

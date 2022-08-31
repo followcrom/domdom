@@ -3,7 +3,7 @@ from sqlalchemy import text
 from database import engine, load_domdoms_from_db, load_domdom_from_db, add_to_db
 import random
 
-application = Flask(__name__)  # Creating an object of Flask called app
+application = Flask(__name__)
 
 
 @application.route('/')
