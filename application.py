@@ -33,7 +33,5 @@ def send_wisdom():
     return render_template('submitted.html',
                             submission=data)
 
-
-
 if __name__ == "__main__":
     application.run()
