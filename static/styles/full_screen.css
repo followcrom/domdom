@@ -54,65 +54,40 @@
     clear: left;
   }
 
+
 .arrows {
   font-size: 2em;
   text-align : center;
   color: black;
-  padding: 10px;
+  padding: 5px;
 }
 
-  .triangle {
-    border-left: 5px double; 
-    border-bottom: 5px double;
-    height: 10px;
-    width: 10px;
-    transform: rotate(-90deg);
-}
-
-.triangle_up {
-   border-left: 5px double; 
-  border-bottom: 5px double;
-  height: 10px;
-  width: 10px;
-  transform: rotate(90deg);
-}
 
 
 .info {
-  width: 30%;
-  margin: auto;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9em;
-  text-align : left;
-  line-height: 1.2;
-  color: black;
-  padding: 10px;
-  }
+width: 30%;
+margin: auto;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 0.9em;
+text-align : center;
+line-height: 1.4;
+color: black;
+padding: 10px;
+}
 
-
-  .info_right {
-    width: 30%;
-    margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-    text-align : right;
-    line-height: 1.2;
-    color: black;
-    
-    }
 
 
 .content {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    flex-grow: 1;
-   }
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-grow: 1;
+}
 
 
 .content_box {
   padding : 15px;
-  background-color: aquamarine;
+  background-color: #F0F8FF;
   border: 8px double #000;
   border-radius: 10px;
   margin-bottom: 1vh;
@@ -150,7 +125,7 @@
   }
 
 
-.more {
+.submitted {
     padding : 10px;
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
@@ -159,20 +134,21 @@
   }
 
 
-a.one:link {
+a.page:link {
     color:#000;
-    text-decoration: none;
+    text-decoration: underline;
     cursor: pointer;
   }
 
-a.one:visited {
-    color:#000;
-    cursor: pointer;
+a.page:visited {
+  color:#000;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-a.one:hover {
-    color: #7d9a90;
-    text-decoration: underline;
+a.page:hover {
+    color: teal;
+    text-decoration: none;
     cursor: pointer;
   }
 
@@ -244,6 +220,25 @@ input[type=submit]:hover {
     border-top: 5px solid black;
 }
 
+
+a.footer:link {
+  color:#000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a.footer:visited {
+color:#000;
+text-decoration: underline;
+cursor: pointer;
+}
+
+a.footer:hover {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 .icon {
     padding-right: 15px;
