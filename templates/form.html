@@ -1,35 +1,22 @@
-<div>
+<form action="/sent" method="post">
+
+  <div>
+    <h2>Send us some wisdom:</h2>
+    </div>
+    
+  <div>
+  <label>Title:</label>
+  <br>
+  <input type="text" name="title">
+  </div>
 
 
+  <div>
+  <label>Wisdom:</label>
+  <br>
+  <textarea name="wisdom" placeholder="mulit-line input"></textarea>
+  </div>
 
-    <form action="/sent" method="post">
+  <div><input type="submit" value="Submit"></div>
 
-      <div>
-        <h2>Send us some wisdom:</h2>
-        
-      <label>Title:</label>
-      <br>
-      <input type="text" name="title">
-      </div>
-
-
-      <div>
-      <label>Wisdom: *</label>
-      <br>
-      <textarea name="wisdom" placeholder="mulit-line input"></textarea>
-      </div>
-
-
-      <div>
-      <label>Attribution *</label>
-      <br>
-      <input type="text" name="attribution" required>
-      </div>
-
-      <input type="submit" value="Submit">
-
-    </form>
-
-  <p style = "font-size:0.8em">* required</p>
-
-</div>
+</form>

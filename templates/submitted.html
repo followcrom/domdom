@@ -21,10 +21,16 @@
 
 </div>
 
-<div class="welcome_bar">
-  <script src="{{url_for('static', filename='js/get_time.js')}}"></script>
+<div class="top_bar">
+  &#8618 A web app that interacts with an Amazon DynamoDB database &#8617
 </div>
 
+<div class="slice_bar">
+  <div class="info">
+    User content is saved to the database and returned below:
+    <div class="arrows">&#8595&#8595&#8595&#8595&#8595</div>
+  </div>
+</div>
 
 <div class="content">
 
@@ -40,10 +46,6 @@
     {{line}}
 
     {% endfor %}
-
-    <br>
-
-    <i>- {{submission.attribution}}</i>
   </div>
 
 </div>
