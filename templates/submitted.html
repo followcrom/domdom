@@ -1,62 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ranDom wisDom - {{submission['title']}}</title>
 {% include 'header.html' %}
-</head>
-
-
-<body class="main">
-
-<div class="banner">
-
-<div class="banner_image">
-<img src="static/images/djrr.jpg" alt="DJ Double R" height="120px">
-</div>
-
-
-<div class="button button1">
-<a href="/">Random<br>Wisdom</a>
-</div>
-
-</div>
-
-<div class="top_bar">
-  &#8618 A web app that interacts with an Amazon DynamoDB database &#8617
-</div>
-
-<div class="slice_bar">
-  <div class="info">
-    User content is saved to the database and returned below:
-    <div class="arrows">&#8595&#8595&#8595&#8595&#8595</div>
-  </div>
-</div>
 
 <div class="content">
 
-<div class = content_box>
+  <div class=content_box>
 
-<div class = title>
-  {{submission.title}}
-</div>
+    <div class=title>
+      {{submission.title}}
+    </div>
 
-<div class=text>
-    {% for line in submission.wisdom.split("\n") %}
+    <div class=text>
+      {% for line in submission.wisdom.split("\n") %}
 
-    {{line}}
+      {{line}}
 
-    {% endfor %}
+      {% endfor %}
+    </div>
+
   </div>
 
-</div>
-
-<div class="submitted">
-  <a class="page" href = "/">Return to homepage</a>
-</div>
+  <div class="submitted">
+    <a class="page" href="/">Return to homepage</a>
+  </div>
 
 </div>
 
 {% include 'footer.html' %}
 
-  </body>
-  </html>
+</body>
+
+</html>

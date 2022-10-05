@@ -2,86 +2,81 @@
 <html>
 {% include 'header.html' %}
 
-<body class="main">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N26X8R4"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
-<div class="banner">
-  <img src="static/images/djrr.jpg" alt="DJ Double R" height="120px">
-
-  <div class="button button1">
-  <a href="/">Random<br>Wisdom</a>
-  </div>
-
+<div class="info">
+  A content box is chosen at random from the database and displayed below:
 </div>
-
-<div class="top_bar">
-  &#8618 A cloud-based web app that interacts with a DynamoDB database &#8617
-</div>
-
-
-  <div class="info">
-    A content box is chosen at random from the database and displayed below:
-  </div>
-  <div class="arrows">&#8595&#8595&#8595&#8595&#8595</div>
+<div class="arrows">&#8595&#8595&#8595&#8595&#8595</div>
 
 
 <div class="content">
 
-  <div class = content_box>
+  <div class=content_box>
     <div class="id_ref">
       content box id: <b>{{dom_id}}</b> of <b>{{numdoms}}</b>
-      </div>
+    </div>
 
-{% include 'quotes.html' %}
-</div>
-</div>
-
-
-
-  <div class="arrows">&#8593&#8593&#8593&#8593&#8593</div>
-  <div class="info">
-  Currently the box shows a quote (some 'random wisdom') but any kind of content can be used. Click 'Random Wisdom' above to reload it.
-</div>
+    <div class=title>
+      {{domdom.title}}
+    </div>
 
 
+    <div class=text>
+      {% for line in domdom.wisdom.split("\n") %}
 
-  <div class="info">
-    Users can add their own entires to the database:
-    <div class="arrows">&#8595&#8595&#8595&#8595&#8595</div>
+      {{line}}
+
+      {% endfor %}
+
+      <br>
+    </div>
   </div>
+</div>
+
+
+
+<div class="arrows">&#8593&#8593&#8593&#8593&#8593</div>
+<div class="info">
+  Currently the box shows a quote (some 'random wisdom') but any kind of content can be used. Click 'Random Wisdom'
+  above to reload it.
+</div>
+
+
+
+<div class="info">
+  Users can add their own entires to the database:
+  <div class="arrows">&#8595&#8595&#8595&#8595&#8595</div>
+</div>
 
 
 <div class=form>
-{% include 'form.html' %}
+  {% include 'form.html' %}
 </div>
 
 
-  <div class="arrows">&#8593&#8593&#8593&#8593&#8593</div>
-  <div class="info">
-    These are subsequently included in the boxes to be displayed. Try it for yourself!
-    <br><br>
-    
-    <a class="page" href="https://github.com/followcrom/" target="_blank"><img class="icon" src="static/images/icons/github.png" width="32" height="32" alt="GitHub" title="GitHub"></a>
-    <img class="icon" src="static/images/icons/python.png" width="32" height="32" alt="Built with Python" title="Built with Python">
-    <img class="icon" src="static/images/icons/mysql.png" width="32" height="32" alt="Built with MySQL" title="Built with MySQL">
-    View the code on <a class="page" href="https://github.com/followcrom/domdom" target="blank">Github</a>
-  </div>
+<div class="arrows">&#8593&#8593&#8593&#8593&#8593</div>
 
-
-
-
-<div class="bottomrow">
-    <div class="grid-container">
-        <div class="grid-item"><a class="footer" href="https://followcrom.com">followcrom.com</a></div>
-        <div class="grid-item">&copy; followCrom 2022</div>
-        </div>
-        
-        <div>
+<div class="info">These are subsequently included in the boxes to be displayed. Try it for yourself!
 </div>
+
+<div class="tools">
+  View the code on <a class="page" href="https://github.com/followcrom/domdom" target="blank">Github</a>
+  <br><br>
+  <a class="page" href="https://github.com/followcrom/" target="_blank"><img class="icon"
+      src="static/images/icons/github.png" width="32" height="32" alt="GitHub" title="GitHub"></a>
+  <img class="icon" src="static/images/icons/python.png" width="32" height="32" alt="Built with Python"
+    title="Built with Python">
+  <img class="icon" src="static/images/icons/mysql.png" width="32" height="32" alt="Built with MySQL"
+    title="Built with MySQL">
+
 </div>
+
+
+
+
+{% include 'footer.html' %}
+
 
 </body>
+
 </html>

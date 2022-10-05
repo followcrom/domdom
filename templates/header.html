@@ -1,16 +1,33 @@
 <head>
-  <title>ranDOM wisDOM</title>
+
+  <title>followCrom online</title>
+
   <meta charset="utf-8">
-  <!-- Google tag (Analytics) -->
-  <script src="{{url_for('static', filename='js/analytics.js')}}"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5879ZFBCXY"></script>
-  <!-- End Google Tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel= "stylesheet" media="(min-width: 481px)" href= "{{ url_for('static', filename='styles/full_screen.css') }}">
-  <link rel="stylesheet"  media="(max-width: 480px)" href= "{{ url_for('static', filename='styles/handheld.css') }}">
+  <link rel="stylesheet" media="(min-width: 1024px)" href="{{ url_for('static', filename='styles/large.css') }}">
+  <link rel="stylesheet" media="(min-width: 640px) and (max-width: 1023px)"
+    href="{{ url_for('static', filename='styles/medium.css') }}">
+  <link rel="stylesheet" media="(max-width: 639px)" href="{{ url_for('static', filename='styles/small.css') }}">
 
   <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon_dom.ico') }}">
 
+  <script type="text/javascript" language="JavaScript" src="js/analytics.js"></script>
+
 </head>
+
+
+<body class="main">
+
+  <div class="banner">
+    <img src="static/images/djrr.jpg" alt="DJ Double R" height="120px">
+
+    <div class="button button1">
+      <a href="/">Random<br>Wisdom</a>
+    </div>
+
+  </div>
+
+  <div class="top_bar">
+    cloud based web app that interacts with a DynamoDB database
+  </div>
