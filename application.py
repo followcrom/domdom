@@ -18,7 +18,7 @@ def show_dom():
                         numdoms=numdoms)
 
 
-@application.route('/api') # an api page for a json list
+@application.route('/api')
 def show_json():
     domdoms = load_domdoms_from_db()
     return jsonify(domdoms)
@@ -28,10 +28,11 @@ def show_json():
 def send_wisdom():
     data = request.form
     add_to_db(data)
-    # send an email
-    # return jsonify(data)
     return render_template('submitted.html',
                             submission=data)
 
+
+"""
 if __name__ == "__main__":
     application.run(host="127.0.0.1", port=80, debug=True)
+"""
