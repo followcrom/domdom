@@ -28,14 +28,22 @@
   }
 
 
-.button1 {
+  @keyframes enticing {
+    0% {color: white;}
+    50%  {color: red;}
+    100% {color: white;}
+  }
+
+  .button1 {
     color: #FFF;
     text-decoration: none;
+    animation: enticing 2s linear infinite;
   }
 
 
 .button1:hover {
     color: red;
+    animation-play-state: paused;
   }
 
 
@@ -123,7 +131,6 @@
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
     text-align : center;
-    font-style: italic;
     margin-top: auto;
   }
 
@@ -224,8 +231,10 @@ a.footer:hover {
 }
 
 .icon {
-    padding-right: 10px;
-    padding-left: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 24px;
+  height: 24px;
 }
 
 
@@ -237,7 +246,7 @@ a.footer:hover {
   padding-right: 0px;
   padding-bottom: 0.5vw;
   padding-left: 0px;
-  margin-top: 1.5vh;
+  margin-top: 2vh;
   bottom: 0px;
   width : 100%;
   border-top: 5px solid black;
@@ -245,7 +254,7 @@ a.footer:hover {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 30% 30%;
+    grid-template-columns: 45% 45%;
     justify-content: center;
     gap: 1em;
     padding: 10px;
@@ -254,16 +263,17 @@ a.footer:hover {
 
 .grid-item {
     font-family: Verdana, sans-serif;
-    font-size: 0.6em;
+    font-size: 0.8em;
     text-align: center;
 }
 
 
 .tools {
+  padding-top: 5px;
+  border-top: 2px solid #000;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
   font-size: 0.9em;
   text-align : center;
   line-height: 1.4;
   color: black;
-  padding: 10px;
 }

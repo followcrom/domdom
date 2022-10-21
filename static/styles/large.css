@@ -32,17 +32,27 @@
     background-color: #000;
     transition-duration: 0.4s;
     cursor: pointer;
+    
+  }
+
+
+  @keyframes enticing {
+    0% {color: white;}
+    50%  {color: red;}
+    100% {color: white;}
+  }
+
+  .button1 {
+    color: #FFF;
+    text-decoration: none;
     animation: enticing 2s linear infinite;
   }
 
 
-
-  @keyframes enticing {
-    0% {color: aquamarine;}
-    50%  {color: aliceblue;}
-    100% {color: silver;}
+.button1:hover {
+    color: red;
+    animation-play-state: paused;
   }
-
 
   .top_bar {
   	background-color: #7d9a90;
@@ -243,6 +253,8 @@ a.footer:hover {
 .icon {
     padding-right: 15px;
     padding-left: 15px;
+    width: 32px;
+    height: 32px;
 }
 
 
@@ -265,6 +277,7 @@ a.footer:hover {
 
 
 .tools {
+  border-top: 4px solid #000;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
   font-size: 0.9em;
   text-align : center;
