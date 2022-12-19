@@ -10,57 +10,52 @@
   background-color: #FFF;
 }
 
+
 .banner {
+  padding: 0px;
   background-color: black;
 }
 
 
-.banner img {
-  float: left;
-  margin-left: 30%;
-  margin-right: 1vw;
-}
-
-
-.button {
-  float: left;
-  text-align: right;
+.banner h1 {
   font-family: Verdana, sans-serif;
-  font-weight: normal;
-  font-size: 3em;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  padding: 5px;
+  text-align : center;
+  color: transparent;
+  font-size: 6em;
+  padding: 0px;
+  margin: 0vh;
+  background: linear-gradient(260deg, #006afe, beige, #85cdff, pink, green);
+  background-size: 200% 200%;
+  animation-direction: reverse;
+  -webkit-animation: enticing 5s ease infinite;
+  -moz-animation: enticing 5s ease infinite;
+  animation: enticing 5s ease infinite;
+  -webkit-background-clip: text;
 }
 
 
 @keyframes enticing {
-  0% {color: white;}
-  50%  {color: red;}
-  100% {color: white;}
+  0%{background-position:10% 0%}
+  50%{background-position:91% 110%}
+  100%{background-position:10% 0%}
 }
 
-.button1 {
-  color: #FFF;
-  text-decoration: none;
-  animation: enticing 2s linear infinite;
-}
+a:link, a:visited, a:hover {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: pointer;
+  }
 
-
-.button1:hover {
-  color: red;
-  animation-play-state: paused;
-}
-
-
-.top_bar {
-  background-color: #7d9a90;
-  padding: 5px;
-  font-family: Verdana, sans-serif;
-  text-align : center;
-  font-size: 1.2em;
-  color: #FFF;
-}
+  .top_bar {
+  	background-color: #7d9a90;
+    padding: 5px;
+  	font-family: Verdana, sans-serif;
+  	text-align : center;
+  	font-size: 1.4em;
+  	color: #FFF;
+    clear: left;
+    border-bottom: #000 solid 5px;
+  }
 
 
 .arrows {
