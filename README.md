@@ -34,4 +34,4 @@ Launches the HTML templates when instigated
 Database
 Interacts with the database using MySQL queries via SQL alchemy.
 
-[MIT license](https://badgen.net/badge/license/MIT/blue)
+![MIT license](https://badgen.net/badge/license/MIT/blue)
